@@ -13,7 +13,7 @@ def calcular_deformacion(lat, lon):
 
 async def ubication(update,context):
     location = update.message.location
-    lat = location.latitudes
+    lat = location.latitude
     lon = location.longitude
     deformacion = calcular_deformacion(lat, lon) 
     await update.message.reply_text(f"Lat: {lat}, Lon: {lon}, Def: {deformacion}")
